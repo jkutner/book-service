@@ -12,7 +12,9 @@
 
 eureka:
     instance:
-        hostname: book-service.herokuapp.com
+        appname: ${HEROKU_APP_NAME}
+        instanceId: ${HEROKU_APP_NAME}:${DYNO}
+        hostname: ${HEROKU_APP_NAME}.herokuapp.com
         non-secure-port: 80
         prefer-ip-address: false
     client:
